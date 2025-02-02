@@ -28,3 +28,19 @@ function calculateAge(dob) {
 const dob = '1999-10-14';  // Tahir's date of birth
 const age = calculateAge(dob);
 document.getElementById("age").textContent = age;
+
+// Loading my name in different languages for logo
+const names = [
+  "Tahir",        // English
+  "طاہر",         // Urdu
+  "ताहिर",        // Hindi
+  "タヒル",        // Japanese
+  "Тахир"         // Russian
+];
+function displayRandomName() {
+  const randomIndex = Math.floor(Math.random() * 5);
+  document.getElementById("dynamic-logo1").textContent = names[randomIndex];
+  document.getElementById("dynamic-logo2").textContent = names[randomIndex];
+}
+
+displayRandomName()
