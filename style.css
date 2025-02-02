@@ -209,39 +209,31 @@ section {
   bottom: 0;
   left: 0;
   width: 0;
-  height: 6px;
-  background-color: rgb(170, 170, 170);
-  border-radius: 5px; /* Add border-radius to make the underline have smooth, rounded edges */
-  animation: loadUnderline 2s ease-in-out forwards, fadeOut 1s ease-out 2s forwards;
+  height: 10px;
+  background-color: rgb(173, 173, 173);
+  border-radius: 5px;
+  opacity: 0; /* Start with invisible underline */
+  animation: underlineAnimation 3s ease-in-out infinite; /* Infinite loop */
 }
 
-  /* Keyframe for loading the underline */
-  @keyframes loadUnderline {
-    0% {
-      width: 0;
-      opacity: 0; /* Start invisible */
-    }
-    50% {
-      width: 100%;
-      opacity: 1; /* Fade in as it expands */
-    }
-    100% {
-      width: 100%;
-      opacity: 1; /* Remain fully visible */
-    }
+/* Keyframe for the entire animation cycle */
+@keyframes underlineAnimation {
+  0% {
+    width: 0;
+    opacity: 0;
+    left: 0; /* Start from the left */
   }
-
-  /* Keyframe for making the underline disappear */
-  @keyframes fadeOut {
-    0% {
-      width: 100%;
-      opacity: 1; /* Fully visible */
-    }
-    100% {
-      width: 0;
-      opacity: 0; /* Fade out and shrink */
-    }
+  50% {
+    width: 100%;
+    opacity: 1;
+    left: 0; /* Stay at the left, fully visible */
   }
+  100% {
+    width: 0;
+    opacity: 0;
+    left: 100%; /* Move to the right and fade out */
+  }
+}
 
 .title {
   font-size: 3rem;
