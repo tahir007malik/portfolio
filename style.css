@@ -98,7 +98,7 @@ a:hover {
   position: absolute;
   top: 100%;
   right: 0;
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0);
   width: fit-content;
   max-height: 0;
   overflow: hidden;
@@ -194,6 +194,54 @@ section {
   font-size: 1.75rem;
   margin-bottom: 1rem;
 }
+
+.loading-underline {
+  position: relative;
+  display: inline-block;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 1rem;
+}
+
+.loading-underline::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 6px;
+  background-color: rgb(170, 170, 170);
+  border-radius: 5px; /* Add border-radius to make the underline have smooth, rounded edges */
+  animation: loadUnderline 2s ease-in-out forwards, fadeOut 1s ease-out 2s forwards;
+}
+
+  /* Keyframe for loading the underline */
+  @keyframes loadUnderline {
+    0% {
+      width: 0;
+      opacity: 0; /* Start invisible */
+    }
+    50% {
+      width: 100%;
+      opacity: 1; /* Fade in as it expands */
+    }
+    100% {
+      width: 100%;
+      opacity: 1; /* Remain fully visible */
+    }
+  }
+
+  /* Keyframe for making the underline disappear */
+  @keyframes fadeOut {
+    0% {
+      width: 100%;
+      opacity: 1; /* Fully visible */
+    }
+    100% {
+      width: 0;
+      opacity: 0; /* Fade out and shrink */
+    }
+  }
 
 .title {
   font-size: 3rem;
