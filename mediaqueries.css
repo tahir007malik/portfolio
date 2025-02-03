@@ -1,4 +1,5 @@
 @media screen and (max-width: 1400px) {
+
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
@@ -13,6 +14,30 @@
 }
 
 @media screen and (max-width: 1200px) {
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 5rem;
+  justify-content: space-around;
+  gap: .1rem;
+}
+
+article h3 {
+  font-size: .7rem;
+}
+
+article p {
+  font-size: .5rem;
+}
+
 .loading-underline {
   position: relative;
   display: inline-block;
@@ -90,6 +115,30 @@
 }
 
 @media screen and (max-width: 600px) {
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 5rem;
+  justify-content: space-around;
+  gap: .1rem;
+}
+
+article h3 {
+  font-size: .6rem;
+}
+
+article p {
+  font-size: .4rem;
+}
+
 .loading-underline {
   position: relative;
   display: inline-block;
