@@ -1,5 +1,27 @@
-@media screen and (max-width: 1400px) {
-
+@media screen and (max-width: 1500px) {
+  .article-container {
+    display: flex;
+    text-align: initial;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+  
+  article {
+    display: flex;
+    width: 7rem;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  
+  article h3 {
+    font-size: .9rem;
+  }
+  
+  article p {
+    font-size: .6rem;
+  }
   #profile {
     height: 83vh;
     margin-bottom: 6rem;
