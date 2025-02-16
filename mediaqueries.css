@@ -33,6 +33,13 @@
   #projects {
     height: fit-content;
   }
+  .project-title {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+  .last-project {
+    margin-bottom: 10rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
