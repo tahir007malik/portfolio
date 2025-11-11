@@ -1,2 +1,2 @@
 # portfolio
-This project contains code of my portfolio website.
+This repo contains code of my portfolio website.
